@@ -6,9 +6,11 @@ const authRoutes = require('./public/routes/authRoutes');
 const { createUser } = require('./utils/testuser');
 require('dotenv').config(); 
 const PORT = 5000
+// dont vex reading my codes I just like to comment....lormy
 
 //middle
 app.use(express.json());
+app.use(express.json({ extended: true }))
 app.use(cookieParser());
 
 
