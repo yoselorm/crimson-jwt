@@ -1,0 +1,29 @@
+1.What is JWT and how does it work?
+JWT is a compact, URL-safe way to represent claims to be transferred between parties. It consists of three parts: a header, a payload, and a signature. The header and payload are Base64Url encoded JSON objects, and the signature is used to verify the token's integrity.
+
+2.Explain the difference between cookies and tokens in web development.
+Cookies are stored on the client-side by the browser and sent with every HTTP request. Tokens are self-contained pieces of data sent in the request headers or payload. They are typically used for authentication and authorization.
+
+3.How can you secure JWT tokens from being tampered with or decoded?
+JWT tokens can be secured by using strong cryptographic algorithms for signing and verifying tokens. The signing key should be kept secret, and HTTPS should be used to encrypt communication between the client and server.
+
+4.What are the advantages of using JWT over traditional session-based authentication?
+JWT is stateless, decentralized, and lightweight compared to session-based authentication. It allows for easier scalability and interoperability across different platforms and domains.
+
+5.How does the concept of statelessness apply to JWT authentication?
+JWT authentication is stateless because it does not require the server to store session information. All necessary information is contained within the token itself, making authentication simpler and more efficient.
+
+6.What are the common security risks associated with using cookies for authentication?
+Common security risks include XSS attacks, CSRF attacks, session hijacking, and session fixation.
+
+7.How can you implement token-based authentication in a Node.js Express server?
+Token-based authentication in Node.js Express involves generating JWT tokens upon successful authentication and verifying these tokens in subsequent requests using middleware.
+
+8.Explain the process of token validation in a Node.js Express server.
+Token validation in Node.js Express involves verifying the JWT token's signature, expiration time, and any additional claims. This is typically done using a library like jsonwebtoken.
+
+9.How can you handle token expiration and renewal in a Node.js Express server?
+Token expiration and renewal can be handled by setting an expiration time when generating JWT tokens and implementing a token refresh mechanism where clients exchange an expired token for a new one.
+
+10.Discuss the best practices for storing and managing JWT tokens securely in a web application.
+Best practices include using strong cryptographic algorithms, keeping the signing key secret, using HTTPS, and securely storing tokens on the client-side. Additionally, implement proper token expiration and consider token revocation mechanisms for added security.
